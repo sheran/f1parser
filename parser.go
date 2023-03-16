@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/url"
+	"os"
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
@@ -22,7 +23,12 @@ type Filter interface {
 func LoadToml() []Filter {
 	log.Println("loading filters...")
 	list := make([]Filter, 0)
-	dir := "filters"
+	ex, err := os.Executable()
+	if err != nil {
+		log.Fatal(err)
+	}
+	path := filepath.Dir(ex)
+	dir := fmt.Sprintf("%s/filters", path)
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
 		log.Fatal(err)
