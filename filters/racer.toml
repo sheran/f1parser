@@ -1,0 +1,6 @@
+host = "racer.com"
+path = "-"
+title = "h1.article__headline"
+body ="div.articleBody > p"
+skip_children = false 
+rss = "https://racer.com/feed/"

@@ -1,0 +1,6 @@
+host = "www.motorsportweek.com"
+path = "-"
+title ="h1.jeg_post_title"
+body = "div.content-inner > p"
+skip_children = false
+rss = "https://www.motorsportweek.com/feed/"

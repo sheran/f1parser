@@ -1,0 +1,8 @@
+host = "www.racefans.net"
+path = "-"
+title ="h1.entry-title"
+body ="div.entry-content > p"
+skip_classes = ["wp-caption-text", "block-image-caption"]
+skip_text = ["Advert | Become a RaceFans supporter and go ad-free", "Follow RaceFans on social media:"]
+skip_children = false
+rss = "https://www.racefans.net/feed/"

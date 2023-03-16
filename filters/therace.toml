@@ -1,0 +1,5 @@
+host = "the-race.com"
+path = "/formula-1/"
+body = "div#therace-post-content > p"
+title = "h1.entry-title"
+skip_children = false

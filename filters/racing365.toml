@@ -1,0 +1,7 @@
+host = "racingnews365.com"
+path = "-"
+title = "h1.content__heading__h1"
+body ="div.content-field__redactor > p"
+skip_classes = ["adverts-wrapper", "gallery", "related"]
+skip_children = false
+rss = "https://racingnews365.com/feed/news.xml"

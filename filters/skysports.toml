@@ -1,0 +1,6 @@
+host = "www.skysports.com"
+path = "/f1/news/"
+title = "h1.article__title > span.article__long-title"
+body = "div.article__body--lead > p"
+skip_text = ["Get Sky Sports"]
+skip_children = false

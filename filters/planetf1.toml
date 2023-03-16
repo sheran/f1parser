@@ -1,0 +1,5 @@
+host = "www.planetf1.com"
+path = "/news/"
+title = "h1.text-primary"
+body = "div.ciam-article-pf1 > p"
+skip_children = false

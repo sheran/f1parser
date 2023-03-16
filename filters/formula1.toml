@@ -1,0 +1,6 @@
+host = "www.formula1.com"
+path = "/en/latest/"
+title = "div.f1-article--title > h1.f1--xl"
+body ="div.f1-article--rich-text > p"
+skip_text = ["READ MORE", "RACE REPORT", "F1 NATION:"]
+skip_children = false

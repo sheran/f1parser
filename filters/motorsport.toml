@@ -1,0 +1,7 @@
+host = "www.motorsport.com"
+path = "/f1/news/"
+title = "h1.ms-entity-detail-header_title"
+body = "div.ms-article-content > p"
+skip_classes = ["Advert__wrapper", "Article__video-gallery", "Article__related-link"]
+skip_children = false
+rss = "https://www.motorsport.com/rss/f1/news/"

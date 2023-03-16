@@ -1,0 +1,5 @@
+host = "www.speedcafe.com/"
+path = "-"
+title = "h1.entryTitle"
+body = "div.entryContent > p"
+skip_children = false

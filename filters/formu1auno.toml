@@ -1,0 +1,8 @@
+host = "www.formu1a.uno"
+path = "/en/"
+title = "h1.entry-title"
+body = "div.td-post-content > p"
+thumb = "div.td-post-featured-image > img"
+skip_children = false 
+skip_elements = ["img"]
+rss = "https://www.formu1a.uno/en/feed/"
