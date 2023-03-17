@@ -1,5 +1,6 @@
-host = "www.speedcafe.com/"
+host = "www.speedcafe.com"
 path = "-"
 title = "h1.entryTitle"
 body = "div.entryContent > p"
+thumb = "div.entryContent > img.size-large"
 skip_children = false

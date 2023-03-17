@@ -28,8 +28,10 @@ func LoadToml() []Filter {
 		log.Fatal(err)
 	}
 	path := filepath.Dir(ex)
+
 	dir := fmt.Sprintf("%s/filters", path)
-	files, err := ioutil.ReadDir(dir)
+
+	files, err := ioutil.ReadDir("filters")
 	if err != nil {
 		log.Fatal(err)
 	}
