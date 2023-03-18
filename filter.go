@@ -1,8 +1,10 @@
 package f1parser
 
 import (
+	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -23,14 +25,19 @@ type FilterImpl struct {
 	Doc          *goquery.Document
 }
 
-func (rf *FilterImpl) Init(url string) error {
+func (rf *FilterImpl) Init(urlPage string) error {
+	// we always strip out the query parameters
+	toCheck, err := url.Parse(urlPage)
+	if err != nil {
+		return err
+	}
 	// we check for an amp suffix
 	ampSuffixes := []string{"/amp", "/amp/"}
-	newUrl := url
-
+	newUrl := fmt.Sprintf("%s://%s%s", toCheck.Scheme, toCheck.Host, toCheck.Path)
 	for _, suffix := range ampSuffixes {
 		newUrl = strings.TrimSuffix(newUrl, suffix)
 	}
+
 	log.Printf("fetching %s\n", newUrl)
 	resp, err := http.Get(newUrl)
 	if err != nil {
