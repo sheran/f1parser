@@ -10,7 +10,7 @@ import (
 )
 
 func TestBareToml(t *testing.T) {
-	list := LoadToml()
+	list := LoadToml("filters")
 	url := "https://www.planetf1.com/news/lewis-hamilton-mixed-messages-mercedes/"
 	bodytoml, err := Process(url, list)
 	if err != nil {

@@ -2,7 +2,6 @@ package f1parser
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/url"
 	"os"
@@ -20,22 +19,16 @@ type Filter interface {
 	GetHost() string
 }
 
-func LoadToml() []Filter {
+func LoadToml(dir string) []Filter {
 	log.Println("loading filters...")
 	list := make([]Filter, 0)
-	ex, err := os.Executable()
+
+	entries, err := os.ReadDir(dir)
 	if err != nil {
 		log.Fatal(err)
 	}
-	path := filepath.Dir(ex)
 
-	dir := fmt.Sprintf("%s/filters", path)
-
-	files, err := ioutil.ReadDir("filters")
-	if err != nil {
-		log.Fatal(err)
-	}
-	for _, file := range files {
+	for _, file := range entries {
 		if filepath.Ext(file.Name()) == ".toml" {
 			var fl FilterImpl
 			log.Printf("[+] %s/%s\n", dir, file.Name())
