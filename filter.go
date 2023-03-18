@@ -55,7 +55,7 @@ func (rf *FilterImpl) Init(urlPage string) error {
 }
 
 func (rf *FilterImpl) Run() (*models.Post, error) {
-	title := rf.Doc.Find(rf.Title).Text()
+	title := strings.Trim(rf.Doc.Find(rf.Title).Text(), " \n\t")
 	post := &models.Post{
 		Title: title,
 	}
