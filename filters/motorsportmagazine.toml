@@ -1,0 +1,5 @@
+host = "www.motorsportmagazine.com"
+path = "/articles/single-seaters/f1/"
+title = "h1.post-title"
+body = "div.user-content > p"
+skip_children = false
