@@ -7,6 +7,10 @@ parsing the HTML body according to a TOML file telling it what to do.
 Look at the `TestBareToml()` function in the testing file. This shows you how to
 load up the TOML files, called filters, and then parse a url accordingly.
 
+Run that specific test like this:
+
+`go test -run TestBareToml`
+
 ## Filters
 
 A filter is a TOML file that describes what elements to select and what elements
