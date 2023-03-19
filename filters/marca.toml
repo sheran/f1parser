@@ -1,0 +1,5 @@
+host = "www.marca.com"
+path = "/en/f1/"
+title = "h1.ue-c-article__headline"
+body = "div.ue-c-article__body > p"
+skip_children = false
